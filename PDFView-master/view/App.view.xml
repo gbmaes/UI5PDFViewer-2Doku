@@ -1,0 +1,39 @@
+<mvc:View
+        controllerName="PdfViewTest.controller.App"
+        displayBlock="true"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:pdf="PdfViewTest.control">
+    <App>
+        <ScrollContainer
+		height="100%"
+		width="100%"
+		horizontal="true"
+		vertical="true">
+        <FlexBox class="sapUiSmallMargin" direction="Column" renderType="Div">
+			<FlexBox>
+				<Button text="Correctly Displayed" press="onCorrectPathClick"/>
+				<Button text="Loading Error" press="onIncorrectPathClick"/>
+			</FlexBox>
+            <FlexBox direction="Row" fitContainer="true" renderType="Div">
+				<PDFViewer class="sapUiSmallMarginEnd" source="{/Source}" title="{/Title1}" height="{/Height}" width="auto">
+					<layoutData>
+						<FlexItemData growFactor="1"/>
+					</layoutData>
+				</PDFViewer>
+				<PDFViewer class="sapUiSmallMarginBegin" source="{/Source}" title="{/Title2}" height="{/Height}" width="auto">
+					<layoutData>
+						<FlexItemData growFactor="1"/>
+					</layoutData>
+				</PDFViewer>
+			</FlexBox>
+            <!-- <Page title="PdfView Test">
+                
+                <content>
+                    <pdf:PdfView id="pdfView"></pdf:PdfView>
+                </content>
+            </Page> -->
+        </FlexBox>
+        </ScrollContainer>
+    </App>
+</mvc:View>
