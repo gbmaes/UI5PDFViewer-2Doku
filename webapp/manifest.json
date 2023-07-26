@@ -17,7 +17,7 @@
       "phone": true
     },
     "supportedThemes": [
-      "sap_bluecrystal"
+      "sap_horizon"
     ]
   },
   "sap.ui5": {

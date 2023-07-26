@@ -2,28 +2,28 @@ sap.ui.define([
 	"jquery.sap.global",
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel"
-], function(jQuery, Controller, JSONModel) {
+], function (jQuery, Controller, JSONModel) {
 	"use strict";
 
 	var PageController = Controller.extend("PdfViewTest.controller.App", {
 
-		onInit : function () {
-			this._sValidPath = sap.ui.require.toUrl("sap/m/sample/PdfViewTest") + "/sample.pdf";
-			this._sInvalidPath = sap.ui.require.toUrl("sap/m/sample/PdfViewTest") + "/sample_nonexisting.pdf";
+		onInit: function () {
+			// this._sValidPath = sap.ui.require.toUrl("sap/m/sample/PdfViewTest") + "/sample.pdf"; // sap.ui.core.URI("webapp/src/dummy.pdf") 
+			// this._sInvalidPath = sap.ui.require.toUrl("sap/m/sample/PdfViewTest") + "/sample_nonexisting.pdf";
 			this._oModel = new JSONModel({
-				Source: this._sValidPath,
+				Source: "http://s29.q4cdn.com/175625835/files/doc_downloads/test.pdf",
 				Title1: "My Title 1",
 				Title2: "My Title 2",
-				Height: "600px"
+				Height: "850px"
 			});
 			this.getView().setModel(this._oModel);
 		},
 
-		onCorrectPathClick: function() {
+		onCorrectPathClick: function () {
 			this._oModel.setProperty("/Source", this._sValidPath);
 		},
 
-		onIncorrectPathClick: function() {
+		onIncorrectPathClick: function () {
 			this._oModel.setProperty("/Source", this._sInvalidPath);
 		}
 	});
