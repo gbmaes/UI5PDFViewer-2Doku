@@ -1,0 +1,19 @@
+{
+  "name": "pdfviewer-2-doku",
+  "version": "1.0.0",
+  "description": "a SAP UI5 App",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbmaes/UI5PDFViewer-2Doku.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gbmaes/UI5PDFViewer-2Doku/issues"
+  },
+  "homepage": "https://github.com/gbmaes/UI5PDFViewer-2Doku#readme"
+}
