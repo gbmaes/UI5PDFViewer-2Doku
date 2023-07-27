@@ -16,6 +16,8 @@
 				<Button text="Loading Error" press="onIncorrectPathClick"/>
 			</FlexBox>
             <FlexBox direction="Row" fitContainer="true" renderType="Div">
+				<!-- Versucht, lokale pdf-Dateien zu laden -->
+				<!-- <PDFViewer class="sapUiSmallMarginBegin" source="{/Source}" title="{/Title2}" height="{/Height}" width="auto"></PDFViewer> -->
 				<PDFViewer class="sapUiSmallMarginEnd" source="http://s29.q4cdn.com/175625835/files/doc_downloads/test.pdf" title="{/Title1}" height="{/Height}" width="auto">
 					<layoutData>
 						<FlexItemData growFactor="1"/>
